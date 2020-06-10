@@ -25,6 +25,7 @@
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"2020-05-29 Using Basic version because awesome version wasn't working with vim-solidity
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -78,6 +79,8 @@ endif
 
 "Always show current position
 set ruler
+"2020-05-29 Show line numbers
+set nu
 
 " Height of the command bar
 set cmdheight=1
@@ -125,7 +128,8 @@ endif
 
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+" 2020-05-29 I don't like extra margin
+"set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -165,8 +169,9 @@ set ffs=unix,dos,mac
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
-set nobackup
-set nowb
+"set nobackup
+" 2020-05-29 backup is fine, isn't going to take much space.
+"set nowb
 set noswapfile
 
 
@@ -189,7 +194,8 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+" 2020-06-10 wrap is annoying
+set nowrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -212,6 +218,7 @@ map <C-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
+" 2020-05-29 Can I map this to 'option', no right hand CTRL on mac keyboard
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
